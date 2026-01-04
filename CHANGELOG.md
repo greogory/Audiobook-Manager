@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+## [3.5.3] - 2026-01-04
+
+### Fixed
+- **Bash scripts**: Fixed `log()` function to work with `set -e` (use `if/then` instead of `&&`)
+  - Affects: `build-conversion-queue`, `cleanup-stale-indexes`
+- **API project discovery**: Replaced hardcoded `/raid0/ClaudeCodeProjects` with configurable search
+  - Now checks: `AUDIOBOOKS_PROJECT_DIR` env, `~/ClaudeCodeProjects`, `/raid0/ClaudeCodeProjects`, `~/projects`, `/opt/projects`
+
 ## [3.5.2] - 2026-01-03
 
 ### Fixed
